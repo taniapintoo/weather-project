@@ -15,36 +15,44 @@
   </head>
 
   <body>
-    <div>
+    <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Paris</h1>
-          <p>
-            Tuesday 14:49, scatted clouds
-            <br />
-            Humidity: 66%, Wind: 3.13km/h
-          </p>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">Paris</h1>
+            <p class="weather-app-details">
+              Tuesday 14:49, scatted clouds
+              <br />
+              Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div class="weather-app-icon">🌤️</div>
+            <div class="weather-app-temperature">12</div>
+            <div class="weather-app-unit">ºC</div>
+          </div>
         </div>
-        <div>🌥12ºC</div>
       </main>
 
       <footer>
-        Coded by
+        Project coded by
         <a href="https://github.com/taniapintoo/" target="_blank">
           Tânia Pinto</a
-        >
-        <a href="https://github.com/taniapintoo/" target="_blank">
-          hosted in GitHub</a
-        >
-        <a href="https://metproject.netlify.app/" target="_blank">
-          and on Netlify</a
-        >
+        >, is open-sourced on
+        <a href="https://github.com/taniapintoo/" target="_blank"> GitHub</a>
+        and hosted on
+        <a href="https://metproject.netlify.app/" target="_blank"> Netlify</a>
       </footer>
     </div>
   </body>
