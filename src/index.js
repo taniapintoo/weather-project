@@ -1,4 +1,4 @@
-function updateWeatherData(response) {
+function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
@@ -10,7 +10,7 @@ function updateWeatherData(response) {
   let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
-  timeElement.innerHTML = formateDate(date);
+  timeElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
@@ -18,7 +18,7 @@ function updateWeatherData(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 
-function formateDate(date) {
+function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let days = [
@@ -29,9 +29,9 @@ function formateDate(date) {
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
   let day = days[date.getDay()];
+
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -40,9 +40,9 @@ function formateDate(date) {
 }
 
 function searchCity(city) {
-  let apiKey = "tbocd9f202360a963da143c34a9c1a2f";
+  let apiKey = "b2a5adcct04b33178913oc335f405433";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-  axios.get(apiUrl).then(updateWeatherData);
+  axios.get(apiUrl).then(refreshWeather);
 }
 
 function handleSearchSubmit(event) {
