@@ -18,6 +18,7 @@ This is a web app developed as a final project for SheCodes React using React.js
 - SheCodes Weather API
 
 **Demo**
+
 A live demo of the React Weather App is available here: https://weather-app-project-tania.netlify.app/.
 
 **Credits**
